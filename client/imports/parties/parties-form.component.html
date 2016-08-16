@@ -1,0 +1,55 @@
+<div *ngIf="!user">Please, log in to change party</div>
+<form [formGroup]="addForm" (ngSubmit)="addParty()">
+    <fieldset class="form-group">
+        <md-input formControlName="name"  placeholder="Party name"></md-input>
+        <div [hidden]="addForm.controls['name'].valid || addForm.controls['name'].pristine" class="error">
+            Name is required
+        </div>
+        <md-input formControlName="description" placeholder="Description"></md-input>
+        <md-input formControlName="location" placeholder="Location name"></md-input>
+        <md-checkbox label="Set my value?" formControlName="public">Public</md-checkbox>
+        <button md-raised-button type="submit" [disabled]="!addForm.valid">Add</button>
+        <button md-tooltip="some message" tooltip-position="below">Button</button>
+        <button md-raised-button color="primary" md-tooltip="to see a tooltip" tooltip-position="below">
+            Mouse over this link
+        </button>
+    </fieldset>
+</form>
+<div>
+    <div class='wrapper'>
+
+        <div class='container' [dragula]='"first-bag"'>
+
+            <md-card>Move the HTML elements between the containers</md-card>
+            <md-card>You cannot move them outside the draggable containers </md-card>
+            <md-card>Change the position of your HTML elements inside the draggable is possible.</md-card>
+
+        </div>
+        <div class='container' [dragula]='"first-bag"'>
+
+            <md-card>Move the HTML elements between the containers</md-card>
+            <md-card>You cannot move them outside the draggable containers </md-card>
+            <md-card>Change the position of your HTML elements inside the draggable is possible.</md-card>
+
+        </div>
+
+    </div>
+</div>
+<!--
+<md-grid-list cols="2">
+    <md-grid-tile [style.background]="'lightblue'">
+        <div class='container' [dragula]='"first-bag"'>
+            <a href=""><md-card>Move the HTML elements between the containers</md-card></a>
+            <md-card>You cannot move them outside the draggable containers </md-card>
+            <md-card>Change the position of your HTML elements inside the draggable is possible.</md-card>
+        </div>
+    </md-grid-tile>
+    <md-grid-tile [style.background]="'lightgreen'">
+        <div class='container' [dragula]='"first-bag"'>
+            <md-card>Move the HTML elements between the containers</md-card>
+            <md-card>You cannot move them outside the draggable containers </md-card>
+            <md-card>Change the position of your HTML elements inside the draggable is possible.</md-card>
+        </div>
+    </md-grid-tile>
+</md-grid-list>
+-->

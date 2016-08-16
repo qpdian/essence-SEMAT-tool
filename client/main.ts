@@ -1,5 +1,15 @@
 import { bootstrap } from 'angular2-meteor-auto-bootstrap';
-
+import { disableDeprecatedForms, provideForms } from '@angular/forms';
+import { GOOGLE_MAPS_PROVIDERS } from 'angular2-google-maps/core';
+import {provideLazyMapsAPILoaderConfig} from
+'angular2-google-maps/core';
 import { AppComponent } from './app.component';
-
-bootstrap(AppComponent);
+import { APP_ROUTER_PROVIDERS } from './app.routes';
+import '../both/methods/parties.methods';
+bootstrap(AppComponent, [
+  disableDeprecatedForms(),
+  provideForms(),
+  APP_ROUTER_PROVIDERS,
+  GOOGLE_MAPS_PROVIDERS,
+  provideLazyMapsAPILoaderConfig({ apiKey: 'AIzaSyAEjgp8mqlkfpkQxKkylL_Elqg2oxEZcng' })
+]);

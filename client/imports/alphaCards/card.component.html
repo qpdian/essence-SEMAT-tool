@@ -1,0 +1,70 @@
+<!--<h1>My First Attribute Directive</h1>
+<h4>Pick a highlight color</h4>
+<div>
+    <input type="radio" name="colors" (click)="color='lightgreen'">Green
+    <input type="radio" name="colors" (click)="color='yellow'">Yellow
+    <input type="radio" name="colors" (click)="color='cyan'">Cyan
+</div>
+<p [myHighlight]="color">Highlight me!</p>
+<p [myHighlight]="color" [defaultColor]="'violet'">
+    Highlight me too!
+</p>
+-->
+
+<md-card class="alpha-card">
+    <md-card-header class="alpha-header">
+        <md-card-title>Interesados</md-card-title>
+    </md-card-header>
+    <md-card-content class="alpha-body">
+        <p class="alpha-name">Name</p>
+        <md-list>
+            <md-list-item>
+                <md-checkbox>
+                </md-checkbox>xxxxx
+            </md-list-item>
+            <md-list-item>
+                <md-checkbox>
+                </md-checkbox>xxxxx
+            </md-list-item>
+            <md-list-item>
+                <md-checkbox>
+                </md-checkbox>xxxxx
+            </md-list-item>
+            <md-list-item>
+                <md-checkbox>
+                </md-checkbox>xxxxx
+            </md-list-item>
+
+        </md-list>
+    </md-card-content>
+</md-card>
+<md-content>
+    <md-card  class="area customer">
+        <md-card-actions  align="end" [hidden]="hide" (mouseover)="show()">
+            <button md-button=""><i class="material-icons">favorite</i></button>
+            <button md-button=""><i class="material-icons ">share</i></button>
+        </md-card-actions>
+        <md-card-content>
+              <p>Customer</p>
+        </md-card-content>
+
+    </md-card>
+
+    <div class="area customer">
+        <p>Customer</p>
+    </div>
+
+
+    <div class="area solution">
+        <p>Solution</p>
+
+    </div>
+
+
+    <div class="area endeavor">
+        <p>Endeavor</p>
+    </div>
+
+    <img src="images/areas.PNG"></img>
+
+</md-content>
