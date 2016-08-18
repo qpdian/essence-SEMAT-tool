@@ -10,12 +10,20 @@
     Highlight me too!
 </p>
 -->
-
-<md-card class="alpha-card">
-    <md-card-header class="alpha-header">
+<button (click)="goBack()">Atras</button>
+<ul class="cards">
+    <li *ngFor="let card of cards" [class.selected]="card === selectedCard" (click)="onSelect(card)">
+        <span class="badge">{{card.id}}</span> {{card.name}}
+    </li>
+</ul>
+<card-form [alphaCard]="selectedCard"></card-form>
+<card-detail [alphaCard]="selectedCard"></card-detail>
+ <div class="alpha-card">
+    <md-card class="customer">
+    <md-card-header>
         <md-card-title>Interesados</md-card-title>
     </md-card-header>
-    <md-card-content class="alpha-body">
+    <md-card-content>
         <p class="alpha-name">Name</p>
         <md-list>
             <md-list-item>
@@ -38,14 +46,15 @@
         </md-list>
     </md-card-content>
 </md-card>
+</div>
 <md-content>
-    <md-card  class="area customer">
-        <md-card-actions  align="end" [hidden]="hide" (mouseover)="show()">
+    <md-card class="area customer">
+        <md-card-actions align="end" [hidden]="hide" >
             <button md-button=""><i class="material-icons">favorite</i></button>
             <button md-button=""><i class="material-icons ">share</i></button>
         </md-card-actions>
         <md-card-content>
-              <p>Customer</p>
+            <p>Customer</p>
         </md-card-content>
 
     </md-card>

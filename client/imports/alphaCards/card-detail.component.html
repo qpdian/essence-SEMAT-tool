@@ -1,0 +1,25 @@
+<div *ngIf="alphaCard">
+    <h2>{{alphaCard.name}} details!</h2>
+    <div><label>id: </label>{{alphaCard.id}}</div>
+    <div>
+        <label>name: </label>
+        <input [(ngModel)]="alphaCard.name" placeholder="name" />
+    </div>
+    <div class="alpha-card">
+        <md-card [className]="alphaCard.area">
+            <md-card-header>
+                <md-card-title>{{alphaCard.name}}</md-card-title>
+            </md-card-header>
+            <md-card-content>
+                <p class="alpha-name">{{alphaCard.name}}</p>
+               
+                <md-list *ngFor="let alphaState of alphaCard.alphaStates ">
+                    <md-list-item>
+                        <md-checkbox>
+                            {{alphaState}}</md-checkbox>
+                    </md-list-item>
+                </md-list>
+            </md-card-content>
+        </md-card>
+    </div>
+</div>

@@ -40,6 +40,7 @@ export class PartyDetailsComponent extends MeteorComponent implements OnInit {
     constructor(private route: ActivatedRoute) {
         super();
     }
+
     ngOnInit() {
         this.route.params
             .map(params => params['partyId'])
@@ -51,7 +52,6 @@ export class PartyDetailsComponent extends MeteorComponent implements OnInit {
                         this.getUsers(this.party);
                     }, true);
                 }, true);
-
                 this.subscribe('uninvited', this.partyId, () => {
                     this.getUsers(this.party);
                 }, true);
