@@ -1,6 +1,16 @@
+/*colors */
+
+$customer :  #ccffcc;
+$border-customer : #bfeaa7;
+$endeavor :  #ccecff;
+$border-endeavor : #aac6ff;
+$solution :  #ffff99;
+$border-solution :#f6e27b;
+
+/*cards of Essence */
 .alpha-card {
     md-card {
-      width: 420px;
+      width: 350px;
       height: auto;
       border-style: groove;
       padding: 0;
@@ -18,38 +28,38 @@
 }
 .customer{
   md-card-header{
-    background: #ccffcc;
+    background: $customer;
   }
   md-card {
-    border-color: #d3ecc5;
+    border-color: $border-customer;
   }
   .alpha-name{
-    border-color: #d3ecc5;
+    border-color: $border-customer;
   }
 }
 .endeavor{
   md-card-header{
-    background: #ccecff;
+    background: $endeavor;
   }
   md-card {
-    border-color: #ccecff;
+    border-color: $border-endeavor;
   }
   .alpha-name{
-    border-color: #ccecff;
+    border-color: $border-endeavor;
   }
 }
 .solution{
   md-card-header{
-    background: #ffff99;
+    background: $solution;
   }
   md-card {
-    border-color: #ffff99;
+    border-color: $border-solution;
   }
   .alpha-name{
-    border-color: #ffff99;
+    border-color: $border-solution;
   }
 }
-
+/* areas of Essence*/
 .area {
     border-style: solid;
     border-radius: 15px;
@@ -59,21 +69,21 @@
     width: 500px;
     cursor: pointer;
 }
-.area-customer {
-  background: #ccffcc;
-  border-color: #bfeaa7;
+.color-solution {
+  background: $solution;
+  border-color: $border-solution;
 }
-.area-solution {
-  background: #ffff99;
-  border-color: #f6e27b;
+.color-customer {
+  background: $customer;
+  border-color: $customer;
 }
-.area-endeavor {
-  background: #ccecff;
-  border-color: #aac6ff;
+.color-endeavor {
+  background: $endeavor;
+  border-color: $endeavor;
 }
 
 
- .selected {
+    .selected {
       background-color: #CFD8DC !important;
       color: white;
     }
@@ -106,12 +116,13 @@
       position: relative;
       top: -3px;
     }
+
     .cards .badge {
       display: inline-block;
       font-size: small;
       color: white;
+      background-color: #584e4e;
       padding: 0.8em 0.7em 0 0.7em;
-      background-color: #607D8B;
       line-height: 1em;
       position: relative;
       left: -1px;

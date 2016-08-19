@@ -1,79 +1,81 @@
-<!--<h1>My First Attribute Directive</h1>
-<h4>Pick a highlight color</h4>
-<div>
-    <input type="radio" name="colors" (click)="color='lightgreen'">Green
-    <input type="radio" name="colors" (click)="color='yellow'">Yellow
-    <input type="radio" name="colors" (click)="color='cyan'">Cyan
-</div>
-<p [myHighlight]="color">Highlight me!</p>
-<p [myHighlight]="color" [defaultColor]="'violet'">
-    Highlight me too!
-</p>
--->
-<button (click)="goBack()">Atras</button>
-<ul class="cards">
-    <li *ngFor="let card of cards" [class.selected]="card === selectedCard" (click)="onSelect(card)">
-        <span class="badge">{{card.id}}</span> {{card.name}}
-    </li>
-</ul>
-<card-form [alphaCard]="selectedCard"></card-form>
-<card-detail [alphaCard]="selectedCard"></card-detail>
- <div class="alpha-card">
-    <md-card class="customer">
-    <md-card-header>
-        <md-card-title>Interesados</md-card-title>
-    </md-card-header>
-    <md-card-content>
-        <p class="alpha-name">Name</p>
-        <md-list>
-            <md-list-item>
-                <md-checkbox>
-                </md-checkbox>xxxxx
-            </md-list-item>
-            <md-list-item>
-                <md-checkbox>
-                </md-checkbox>xxxxx
-            </md-list-item>
-            <md-list-item>
-                <md-checkbox>
-                </md-checkbox>xxxxx
-            </md-list-item>
-            <md-list-item>
-                <md-checkbox>
-                </md-checkbox>xxxxx
-            </md-list-item>
+<md-grid-list cols="3" gutterSize="4px">
+    <md-grid-tile [colspan]="1" [style.background]="'lightblue'">
+        <ul class="cards">
+            <li *ngFor="let card of cards" [class.selected]="card === selectedCard" (click)="onSelect(card)">
+                <span class="badge">{{card.id}}</span> {{card.name}}
+            </li>
+        </ul>
+    </md-grid-tile>
+    <md-grid-tile [colspan]="1" [style.background]="'lightgreen'">
+        <card-form [alphaCard]="selectedCard"></card-form>
+    </md-grid-tile>
+    <md-grid-tile [colspan]="1" [style.background]="'lightblue'">
+        <card-detail [alphaCard]="selectedCard"></card-detail>
+    </md-grid-tile>
+</md-grid-list>
 
-        </md-list>
-    </md-card-content>
-</md-card>
+<div class="alpha-card">
+    <md-card class="customer">
+        <md-card-header>
+            <md-card-title>Interesados</md-card-title>
+        </md-card-header>
+        <md-card-content>
+            <p class="alpha-name">Name</p>
+            <md-list>
+                <md-list-item>
+                    <md-checkbox>
+                    </md-checkbox>xxxxx
+                </md-list-item>
+                <md-list-item>
+                    <md-checkbox>
+                    </md-checkbox>xxxxx
+                </md-list-item>
+                <md-list-item>
+                    <md-checkbox>
+                    </md-checkbox>xxxxx
+                </md-list-item>
+                <md-list-item>
+                    <md-checkbox>
+                    </md-checkbox>xxxxx
+                </md-list-item>
+
+            </md-list>
+        </md-card-content>
+    </md-card>
 </div>
 <md-content>
-    <md-card class="area customer">
-        <md-card-actions align="end" [hidden]="hide" >
+    <md-card class="area color-customer">
+        <md-card-actions align="end" [hidden]="hide">
             <button md-button=""><i class="material-icons">favorite</i></button>
             <button md-button=""><i class="material-icons ">share</i></button>
         </md-card-actions>
         <md-card-content>
             <p>Customer</p>
         </md-card-content>
-
     </md-card>
 
-    <div class="area customer">
+    <div [className]="'area color-customer'">
         <p>Customer</p>
     </div>
-
-
-    <div class="area solution">
+    <div [className]="'area color-solution'">
         <p>Solution</p>
-
     </div>
-
-
-    <div class="area endeavor">
+    <div [className]="'area color-endeavor'">
         <p>Endeavor</p>
     </div>
 
-    <img src="images/areas.PNG"></img>
-
 </md-content>
+<md-card>
+    <md-card-title>Directiva Highlight</md-card-title>
+    <md-card-content>
+        <div>
+            <input type="radio" name="colors" (click)="color='lightgreen'">Green
+            <input type="radio" name="colors" (click)="color='yellow'">Yellow
+            <input type="radio" name="colors" (click)="color='cyan'">Cyan
+        </div>
+        <p [myHighlight]="color">Highlight me!</p>
+        <p [myHighlight]="color" [defaultColor]="'violet'">
+            Highlight me too!
+        </p>
+        <button (click)="goBack()">Atras</button></md-card-content>
+</md-card>
