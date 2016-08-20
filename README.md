@@ -1,10 +1,17 @@
 # Essboard : Application  about Essence
 
-## Usage
+## Install dependencies
 
 
 ```
 meteor npm install
+
+```
+
+## Run the app
+
+```
+meteor
 
 ```
 
