@@ -1,8 +1,8 @@
 <div *ngIf="alphaCard">
     <md-card>
-        <md-card-title>Registra estado</md-card-title>
+        <md-card-title>Registra estado </md-card-title>
         <md-card-content>
-            <form [formGroup]="addAlphaState" (ngSubmit)="addAlphaStateCard()">
+            <form  (ngSubmit)="addAlphaStateCard()" [formGroup]="addAlphaState" >
                 <md-input formControlName="nameState" placeholder="Estado"></md-input>
                 <div [hidden]="addAlphaState.controls['nameState'].valid || addAlphaState.controls['nameState'].pristine" class="error">
                     Nombre de estado requerido

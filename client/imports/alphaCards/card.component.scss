@@ -1,7 +1,7 @@
 /*colors */
 
 $customer :  #ccffcc;
-$border-customer : #bfeaa7;
+$border-customer : #8cae78;
 $endeavor :  #ccecff;
 $border-endeavor : #aac6ff;
 $solution :  #ffff99;
@@ -16,7 +16,9 @@ $border-solution :#f6e27b;
       padding: 0;
     }
     md-card-content{
-      background: white;    
+      background: white;  
+      display: flex;  
+      flex-flow : row wrap;
     }
     .alpha-name {
       border-style: groove;
@@ -24,6 +26,20 @@ $border-solution :#f6e27b;
       text-align: center;
       margin: 5px 30px;
       padding: 7px;
+    }
+    .alphas{
+      width: 60%;
+    }
+    .description{
+      width: 40%;
+      .abstract{
+        padding:5px;
+        margin:5px;
+        border-bottom-style: solid;
+      }
+      .explained{
+        padding: 5px;
+      }
     }
 }
 .customer{
@@ -36,6 +52,11 @@ $border-solution :#f6e27b;
   .alpha-name{
     border-color: $border-customer;
   }
+  .description{
+    .abstract{
+        border-bottom-color : $border-customer;
+    }
+  }
 }
 .endeavor{
   md-card-header{
@@ -47,6 +68,11 @@ $border-solution :#f6e27b;
   .alpha-name{
     border-color: $border-endeavor;
   }
+   .description{
+    .abstract{
+        border-bottom-color : $border-endeavor;
+    }
+  }
 }
 .solution{
   md-card-header{
@@ -57,6 +83,11 @@ $border-solution :#f6e27b;
   }
   .alpha-name{
     border-color: $border-solution;
+  }
+  .description{
+    .abstract{
+        border-bottom-color : $border-solution;
+    }
   }
 }
 /* areas of Essence*/

@@ -24,12 +24,17 @@ export class CardFormComponent implements OnInit {
         });
     }
     resetForm() {
-        this.addAlphaState.controls['nameState']['updateValue']('');
+         for (let name in this.addAlphaState.controls) {
+            this.addAlphaState.controls[name].updateValueAndValidity();
+        this.addAlphaState.controls[name].clearValidators();
+        }
     }
     addAlphaStateCard() {
         if (this.addAlphaState.valid) {
             this.alphaCard.addAlphaState(this.addAlphaState.value.nameState);
             this.resetForm();
+
         }
+
     }
 }

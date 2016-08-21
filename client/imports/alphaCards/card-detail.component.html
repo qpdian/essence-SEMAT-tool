@@ -5,12 +5,29 @@
                 <md-card-title>{{alphaCard.name}}</md-card-title>
             </md-card-header>
             <md-card-content>
-                <p class="alpha-name">{{alphaCard.name}}</p>         
-                <md-list *ngFor="let alphaState of alphaCard.alphaStates ">
-                    <md-list-item>                     
-                            {{alphaState}}
-                    </md-list-item>
-                </md-list>
+                <div class="alphas">
+                    <md-list *ngFor="let alphaState of alphaCard.alphaStates ">
+                        <md-list-item>
+                            <p class="alpha-name">{{alphaState}}</p>
+                        </md-list-item>
+                    </md-list>
+                </div>
+                <div class="description">
+                    <div class="abstract">
+                        <p>abstract </p>
+                    </div>
+                    <div class="explained">
+                        <ul>
+                            <li>fff</li>
+                            <li>ddd</li>
+                        </ul>
+                    </div>
+
+
+
+                    </div>
+                </div>
+
             </md-card-content>
         </md-card>
     </div>
