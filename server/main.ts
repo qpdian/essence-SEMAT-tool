@@ -1,12 +1,14 @@
 
 
 import {loadParties} from './imports/fixtures/parties';
+import {loadAlphas} from  './imports/fixtures/alphas';
 import {Meteor} from 'meteor/meteor';
 import './imports/publications/parties';
 import './imports/publications/users';
 import '../both/methods/parties.methods';
+import '../both/methods/alphas.methods';
  
 Meteor.startup(() => {
-  // load initial Parties
   loadParties();
+  loadAlphas();
 });

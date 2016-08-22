@@ -12,6 +12,6 @@ export class PartiesDataService {
   }
 
   public getData() : Mongo.Cursor<Party> {
-    return this.data;
+    return this.data.;
   }
 }

@@ -13,11 +13,14 @@ import { HighlightDirective } from '../common/highlight.directive';
 import {AlphaCard} from './alpha-card'
 import {CardDetailComponent} from './card-detail.component';
 import {CardFormComponent} from './card-form.component';
+import {AlphasListComponent} from './alphas-list.component';
 import {CardService} from './card.service';
+
+
 @Component({
     selector: 'card',
     template,
-    directives: [HighlightDirective, CardDetailComponent, CardFormComponent, MD_CARD_DIRECTIVES, MD_INPUT_DIRECTIVES, MdIcon, MD_LIST_DIRECTIVES, MD_GRID_LIST_DIRECTIVES,ROUTER_DIRECTIVES, MdCheckbox],
+    directives: [HighlightDirective, CardDetailComponent, CardFormComponent,AlphasListComponent, MD_CARD_DIRECTIVES, MD_INPUT_DIRECTIVES, MdIcon, MD_LIST_DIRECTIVES, MD_GRID_LIST_DIRECTIVES,ROUTER_DIRECTIVES, MdCheckbox],
     providers: [HTTP_PROVIDERS, MdIconRegistry, CardService],
 })
 
