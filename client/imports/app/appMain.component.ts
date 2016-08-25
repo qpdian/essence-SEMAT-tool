@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {HTTP_PROVIDERS} from '@angular/http';
-import { ROUTER_DIRECTIVES ,RouteConfig } from '@angular/router';
+import { ROUTER_DIRECTIVES  } from '@angular/router';
 import { LoginButtons } from 'angular2-meteor-accounts-ui';
 import {MdToolbar } from '@angular2-material/toolbar';
 import {MdButton} from '@angular2-material/button';
@@ -17,10 +17,6 @@ import { CardComponent} from '../alphaCards/card.component';
   directives: [MdToolbar,MD_SIDENAV_DIRECTIVES,MdButton, MD_LIST_DIRECTIVES,MdIcon,ROUTER_DIRECTIVES,LoginButtons],
   providers: [HTTP_PROVIDERS, MdIconRegistry]
 })
-@RouteConfig([
-    { path: '/', component: CardComponent, as: 'Home', useAsDefault:true},
-    { path: '/cards', component: CardComponent, as: 'Components' }
-])
 
 export class AppMainComponent {
   views: Object[] = [

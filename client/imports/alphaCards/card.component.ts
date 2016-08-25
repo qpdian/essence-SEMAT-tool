@@ -8,7 +8,7 @@ import { MdCheckbox } from '@angular2-material/checkbox';
 import {MdIcon, MdIconRegistry} from '@angular2-material/icon';
 import { MD_LIST_DIRECTIVES } from '@angular2-material/list';
 import {HTTP_PROVIDERS} from '@angular/http';
-import { ROUTER_DIRECTIVES ,RouteConfig} from '@angular/router';
+import { ROUTER_DIRECTIVES } from '@angular/router';
 import { HighlightDirective } from '../common/highlight.directive';
 import {AlphaCard} from './alpha-card'
 import {CardDetailComponent} from './card-detail.component';
