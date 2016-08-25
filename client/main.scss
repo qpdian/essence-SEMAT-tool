@@ -14,9 +14,15 @@ html, body {
   height: 100%;
 }
 
+
 body {
-  background-color: #f8f8f8;
-  font-family: 'Muli', sans-serif;
+    margin: 0;
+    font-size: 14px;
+    font-family: 'Karla', sans-serif;
+    line-height: 20px;
+    color: #333333;
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
 }
 
 .sebm-google-map-container {
@@ -30,6 +36,9 @@ body {
 @import "./app.component";
 @import "./imports/parties/parties-list.component";
 @import "./imports/parties/party-details.component";
-@import "./imports/parties/parties-form.component";
+
+@import "./imports/alphaCards/board.component";
 @import "./imports/alphaCards/card.component";
+
 @import "./imports/common/form.component";
+@import "./imports/homePage/header/header.component";

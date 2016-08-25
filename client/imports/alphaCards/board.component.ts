@@ -1,5 +1,7 @@
 import { Component, OnInit, Directive, ElementRef, HostListener, Input} from '@angular/core';
-import template from './card.component.html';
+import {HTTP_PROVIDERS } from '@angular/http';
+import { ROUTER_DIRECTIVES } from '@angular/router';
+/* Angular Material */
 import { MD_CARD_DIRECTIVES } from '@angular2-material/card';
 import { MD_TOOLBAR_DIRECTIVES } from '@angular2-material/toolbar';
 import { MD_INPUT_DIRECTIVES } from '@angular2-material/input';
@@ -7,25 +9,28 @@ import {MD_GRID_LIST_DIRECTIVES} from '@angular2-material/grid-list';
 import { MdCheckbox } from '@angular2-material/checkbox';
 import {MdIcon, MdIconRegistry} from '@angular2-material/icon';
 import { MD_LIST_DIRECTIVES } from '@angular2-material/list';
-import {HTTP_PROVIDERS} from '@angular/http';
-import { ROUTER_DIRECTIVES ,RouteConfig} from '@angular/router';
+/* Directives and services */
+import template from './card.component.html';
 import { HighlightDirective } from '../common/highlight.directive';
 import {AlphaCard} from './alpha-card'
+import {CardService} from './card.service';
+/* Components */
 import {CardDetailComponent} from './card-detail.component';
 import {CardFormComponent} from './card-form.component';
 import {AlphasListComponent} from './alphas-list.component';
-import {CardService} from './card.service';
+/* Drag and drop */
+import { DragulaService, Dragula } from 'ng2-dragula/ng2-dragula';
 
 
 @Component({
-    selector: 'card',
+    selector: 'board',
     template,
     directives: [HighlightDirective, CardDetailComponent, CardFormComponent,AlphasListComponent, MD_CARD_DIRECTIVES, MD_INPUT_DIRECTIVES, MdIcon, MD_LIST_DIRECTIVES, MD_GRID_LIST_DIRECTIVES,ROUTER_DIRECTIVES, MdCheckbox],
     providers: [HTTP_PROVIDERS, MdIconRegistry, CardService],
 })
 
 
-export class CardComponent implements OnInit {
+export class BoardComponent implements OnInit {
     cards: AlphaCard[] = [];
     selectedCard: AlphaCard;
     constructor(private cardService: CardService) {

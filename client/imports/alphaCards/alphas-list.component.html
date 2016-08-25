@@ -1,5 +1,9 @@
 <p>Alphas desde DB</p>
+<p [hidden]="hide">Seee me</p>
 <div *ngFor="let alpha of alphas">
-    <p>dddd</p>
-     <card-detail [alphaCard]="alpha"></card-detail>
+    <card-detail [alphaCard]="alpha" [name]="alpha.name" (onVoted)="onVoted($event)"></card-detail>
 </div>
+
+`
+<h2>Should mankind colonize the Universe?</h2>
+<h3>Agree: {{agreed}}, Disagree: {{disagreed}}</h3>

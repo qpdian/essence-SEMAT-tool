@@ -1,4 +1,4 @@
-import {Component,OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Mongo} from 'meteor/mongo';
 import { MeteorComponent } from 'angular2-meteor';
 import template from './alphas-list.component.html';
@@ -7,13 +7,13 @@ import { Alphas }   from '../../../both/collections/alphas.collection';
 import {CardDetailComponent} from './card-detail.component';
 
 @Component({
-    selector:'alphas-list',
+    selector: 'alphas-list',
     template,
-    directives: [ CardDetailComponent],
-    providers : [AlphasDataService]
+    directives: [CardDetailComponent],
+    providers: [AlphasDataService]
 })
-export class AlphasListComponent extends MeteorComponent implements OnInit{
-    alphas : Mongo.Cursor<any>;
+export class AlphasListComponent extends MeteorComponent implements OnInit {
+    alphas: Mongo.Cursor<any>;
     loading: boolean = false;
     constructor() {
         super();
@@ -22,13 +22,20 @@ export class AlphasListComponent extends MeteorComponent implements OnInit{
     ngOnInit() {
         this.alphas = Alphas.find();
         //this.alphas = this.alphasDataService.getData();
-           //this.autorun(() => {
-           // this.loading = true;
-            this.subscribe('alphas', () => {
-                this.alphas = Alphas.find();
-            }, true);
+        //this.autorun(() => {
+        // this.loading = true;
+        this.subscribe('alphas', () => {
+            this.alphas = Alphas.find();
+        }, true);
         //});
-    }    
+    }
+    agreed = 0;
+    disagreed = 0;
+    hide = true;
+    onVoted(agreed: boolean) {
+        agreed ? this.agreed++ : this.disagreed++;
+        this.hide = agreed;
+    }
 
 
 

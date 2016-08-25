@@ -1,4 +1,4 @@
-import { Component, Input} from '@angular/core';
+import { Component, EventEmitter,Input,Output} from '@angular/core';
 import template from './card-detail.component.html';
 import {AlphaCard} from './alpha-card';
 import {NgClass} from '@angular/common';
@@ -11,5 +11,12 @@ import {NgClass} from '@angular/common';
 export class CardDetailComponent {
     @Input()
     alphaCard: AlphaCard;
+    @Input() name: string;
+    @Output() onVoted = new EventEmitter<boolean>();
+    voted = false;
+    vote(agreed: boolean) {
+        this.onVoted.emit(agreed);
+        this.voted = true;
+    }
 
 }

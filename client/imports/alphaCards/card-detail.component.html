@@ -1,6 +1,6 @@
 <div *ngIf="alphaCard">
     <div class="alpha-card">
-        <md-card [className]="alphaCard.area">
+        <md-card [className]="alphaCard.area.type">
             <md-card-header>
                 <md-card-title>{{alphaCard.name}}</md-card-title>
             </md-card-header>
@@ -25,10 +25,18 @@
 
 
 
-                    </div>
                 </div>
-
-            </md-card-content>
-        </md-card>
     </div>
+
+    </md-card-content>
+    </md-card>
+</div>
+<md-card>
+    <md-card-title>Parent listen event child</md-card-title>
+    <md-card-content>
+        <h4>{{name}}</h4>
+        <button (click)="vote(true)" [disabled]="voted">Agree</button>
+        <button (click)="vote(false)" [disabled]="voted">Disagree</button>
+    </md-card-content>
+</md-card>
 </div>

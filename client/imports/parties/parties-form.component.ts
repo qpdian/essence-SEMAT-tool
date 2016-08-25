@@ -9,12 +9,10 @@ import { MD_INPUT_DIRECTIVES } from '@angular2-material/input';
 import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
 import { MD_GRID_LIST_DIRECTIVES } from '@angular2-material/grid-list';
 import { InjectUser } from 'angular2-meteor-accounts-ui';
-import { DragulaService, Dragula } from 'ng2-dragula/ng2-dragula';
 @Component({
     selector: 'parties-form',
     template,
-    directives: [REACTIVE_FORM_DIRECTIVES, MdCheckbox, MD_INPUT_DIRECTIVES, MD_BUTTON_DIRECTIVES, MD_GRID_LIST_DIRECTIVES,Dragula],
-    viewProviders: [DragulaService],
+    directives: [REACTIVE_FORM_DIRECTIVES, MdCheckbox, MD_INPUT_DIRECTIVES, MD_BUTTON_DIRECTIVES, MD_GRID_LIST_DIRECTIVES]
 })
 @InjectUser('user')
 export class PartiesFormComponent extends MeteorComponent implements OnInit {
