@@ -33,7 +33,7 @@ body {
   width: 400px;
   height: 400px;
 }
-@import "./app.component";
+@import "./imports/app/app.component";
 @import "./imports/parties/parties-list.component";
 @import "./imports/parties/party-details.component";
 

@@ -7,8 +7,7 @@ import {MdButton} from '@angular2-material/button';
 import {MD_SIDENAV_DIRECTIVES} from '@angular2-material/sidenav';
 import {MD_LIST_DIRECTIVES} from '@angular2-material/list';
 import {MdIcon,MdIconRegistry} from '@angular2-material/icon';
-import template from './appMain.component.html';
-import { CardComponent} from '../alphaCards/card.component';
+import template from './app.component.html';
 
 
 @Component({
