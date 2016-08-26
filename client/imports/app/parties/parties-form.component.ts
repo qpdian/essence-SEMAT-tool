@@ -3,7 +3,7 @@ import { MeteorComponent } from 'angular2-meteor';
 import template from './parties-form.component.html';
 import { Meteor } from 'meteor/meteor';
 import { REACTIVE_FORM_DIRECTIVES, FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Parties } from '../../../both/collections/parties.collection';
+import { Parties } from '../../../../both/collections/parties.collection';
 import { MdCheckbox } from '@angular2-material/checkbox';
 import { MD_INPUT_DIRECTIVES } from '@angular2-material/input';
 import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';

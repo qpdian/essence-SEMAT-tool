@@ -1,4 +1,4 @@
-   #header{ 
+#header{ 
     position: fixed;
     top: 0;
     left: 0;
@@ -11,38 +11,19 @@
     line-height: 100px;
     font-size: 15px;
     z-index: 1000;
-   }
-   .name {
+}
+.name {
     z-index: 88888;
-    }
-    .inner {
+}
+.inner {
     max-width: 1024px;
     margin: 0 auto;
-    }
-    .toc-holder {
-    position: fixed;
-    right: 0;
-    }
-    .toc-holder {
-    text-align: right;
-    z-index: 30000;
-    }
-    #illustration {
-    background-color: #4C5364;
-    width: 100%;
-    padding-bottom: 50px;
-    text-align: right;
-    }
-    #illustration img {
-    padding-top: 150px;
-    width: 50%;
-    min-width: 800px;
-    }
-    a {
+}
+a {
     text-decoration: none;
     color: #333;
-    }
-    .btn{
+}
+.btn{
     margin-top:20px;
     color: #FFFFFF;
     display: inline-block;
@@ -55,5 +36,82 @@
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
     will-change: border, color;
+}
+$customer :  #9fc19f;
+$endeavor :  #a3b8c3;
+$solution :  #ffff99;
+    /* main ilustration */
+#illustration {
+    background-color: $endeavor;
+    width: 100%;
+    padding-bottom: 50px;
+    text-align: right;
+    img {
+        padding-top: 150px;
+        width: 50%;
+        min-width: 800px;
+    }
+}
+
+/* about */
+#about {
+    background-color: $customer;
+    height: 1020px;
+    margin-top: -30px;
+    p {
+        text-align: center;
+        padding-top: 60px;
+        font-family: 'Open Sans', sans-serif;
+        letter-spacing: 0.3em;
+        font-weight: 700;
+        color: #fafafa;
+        font-size: 17px;
+        text-transform: uppercase;
+    }
+    a {
+        color: #3a92c8;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+
+#code {
+    /* margin-top: 150px; */
+    border-radius: 5px;
+    width: 750px;
+    margin: 0 auto;
+    padding-top: 15px;
+    font-size: 30px;
+    background: #ccc;
+    height: 700px;
+    font-family: 'Monaco', 'Courier New';
+    text-align: left;
+    font-size: 13px;
+    color: #fafafa;
+}
+#console {
+    width: 670px;
+    padding: 40px;
+    height: 620px;
+    margin: 0 auto;
+    background: #4c4949;
+}
+#footer {
+    background: #fafafa;
+    min-height: 50px;
+    text-align: left;
+    color: #b1b1b1;
+    padding-top: 20px;
+    font-size: 12px;
+    line-height: 20px;
+}
+span.answer {
+    color: #ccc;
+}
+.right {
+    float: right;
 }
     

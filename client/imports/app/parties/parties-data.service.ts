@@ -1,7 +1,7 @@
 import { Mongo } from 'meteor/mongo';
 import { Injectable } from '@angular/core';
-import {Party} from '../../../both/interfaces/party.interface';
-import { Parties }   from '../../../both/collections/parties.collection';
+import {Party} from '../../../../both/interfaces/party.interface';
+import { Parties }   from '../../../../both/collections/parties.collection';
 
 @Injectable()
 export class PartiesDataService {

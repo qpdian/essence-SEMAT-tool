@@ -34,11 +34,11 @@ body {
   height: 400px;
 }
 @import "./imports/app/app.component";
-@import "./imports/parties/parties-list.component";
-@import "./imports/parties/party-details.component";
 
-@import "./imports/alphaCards/board.component";
-@import "./imports/alphaCards/card.component";
+@import "./imports/app/parties/parties-list.component";
+@import "./imports/app/parties/party-details.component";
+@import "./imports/app/alphaCards/card.component";
 
-@import "./imports/common/form.component";
-@import "./imports/homePage/header/header.component";
+@import "./imports/welcome/header/header.component";
+@import "./imports/shared/form.component";
+@import "./imports/shared/wrapper.component";

@@ -10,8 +10,8 @@ import { MdCheckbox } from '@angular2-material/checkbox';
 import {MdIcon, MdIconRegistry} from '@angular2-material/icon';
 import { MD_LIST_DIRECTIVES } from '@angular2-material/list';
 /* Directives and services */
-import template from './card.component.html';
-import { HighlightDirective } from '../common/highlight.directive';
+import template from './board.component.html';
+import { HighlightDirective } from '../../shared/highlight.directive';
 import {AlphaCard} from './alpha-card'
 import {CardService} from './card.service';
 /* Components */
@@ -25,8 +25,8 @@ import { DragulaService, Dragula } from 'ng2-dragula/ng2-dragula';
 @Component({
     selector: 'board',
     template,
-    directives: [HighlightDirective, CardDetailComponent, CardFormComponent,AlphasListComponent, MD_CARD_DIRECTIVES, MD_INPUT_DIRECTIVES, MdIcon, MD_LIST_DIRECTIVES, MD_GRID_LIST_DIRECTIVES,ROUTER_DIRECTIVES, MdCheckbox],
-    providers: [HTTP_PROVIDERS, MdIconRegistry, CardService],
+    directives: [HighlightDirective,Dragula, CardDetailComponent, CardFormComponent,AlphasListComponent, MD_CARD_DIRECTIVES, MD_INPUT_DIRECTIVES, MdIcon, MD_LIST_DIRECTIVES, MD_GRID_LIST_DIRECTIVES,ROUTER_DIRECTIVES, MdCheckbox],
+    providers: [HTTP_PROVIDERS, MdIconRegistry, CardService,DragulaService],
 })
 
 

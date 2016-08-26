@@ -1,0 +1,17 @@
+<button md-fab (click)="showForm()">
+    <md-icon>add</md-icon>
+</button>
+<proyect-form [hidden]="hideForm">></proyect-form>
+<div class="wrapper">
+    <div *ngFor="let proyect of proyects">
+        <a [routerLink]="['/essboard/card']">
+        <md-card>
+            <md-card-title>{{proyect.name}} </md-card-title>
+            <md-card-content>
+                <md-progress-bar mode="determinate" value={{proyect.percent}}></md-progress-bar>
+            </md-card-content>
+        </md-card>
+        </a>
+    </div>
+</div>
+<proyect-detail></proyect-detail>

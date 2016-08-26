@@ -1,12 +1,12 @@
 import { Component, OnInit} from '@angular/core';
 import {HTTP_PROVIDERS} from '@angular/http';
 import { ActivatedRoute, ROUTER_DIRECTIVES } from '@angular/router';
-import { Parties } from '../../../both/collections/parties.collection';
-import {Party} from '../../../both/interfaces/party.interface';
+import { Parties } from '../../../../both/collections/parties.collection';
+import {Party} from '../../../../both/interfaces/party.interface';
 import { MeteorComponent } from 'angular2-meteor';
 import { Meteor } from 'meteor/meteor';
 import { Mongo } from 'meteor/mongo';
-import { DisplayNamePipe } from '../shared/display-name.pipe';
+import { DisplayNamePipe } from '../../shared/display-name.pipe';
 import { InjectUser } from 'angular2-meteor-accounts-ui';
 import { GOOGLE_MAPS_DIRECTIVES, MouseEvent } from 'angular2-google-maps/core';
 import { MD_INPUT_DIRECTIVES } from '@angular2-material/input';
