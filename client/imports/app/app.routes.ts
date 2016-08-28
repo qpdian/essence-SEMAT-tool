@@ -4,6 +4,8 @@ import { AppMainComponent } from './app.component';
 import { CardComponent } from './alphaCards/card.component';
 import { BoardComponent } from './alphaCards/board.component';
 import { ProyectComponent } from './proyects/proyect.component';
+import { ProyectDetailComponent } from './proyects/proyect-detail/proyect-detail.component';
+
 
 
 //noinspection TypeScriptValidateTypes
@@ -23,6 +25,13 @@ export const AppRoutes: RouterConfig = [
       {
         path: 'proyect',
         component: ProyectComponent,
-      }
+      },
+      {
+        path: 'proyect-detail',
+        component: ProyectDetailComponent,
+      },
+
+
+
     ]
   }];

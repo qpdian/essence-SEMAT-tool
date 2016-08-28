@@ -1,6 +1,32 @@
-<base-chart class="chart"
+<!--<base-chart class="chart"
              [datasets]="radarChartData"
              [labels]="radarChartLabels"
              [chartType]="radarChartType"
              (chartHover)="chartHovered($event)"
              (chartClick)="chartClicked($event)"></base-chart>
+             -->
+<!--<chart [options]="options" (load)="saveChart($event.context)">
+    <series (hide)="onSeriesHide($event.context)">
+        <point (select)="onPointSelect($event.context)"></point>
+    </series>
+</chart>
+<button (click)="addPoint()">Click to add random points</button>
+-->
+<md-list>
+    <h3 md-subheader>Dimensiones del proyecto</h3>
+    <md-list-item *ngFor="let dimension of dimensions" (click)="showSelect(dimension)">
+        <p md-line>{{dimension.name}}</p>
+        <md-progress-bar mode="determinate" value={{dimension.percent}}></md-progress-bar>
+    </md-list-item>
+</md-list>
+<div *ngIf="dimensionSelected">
+    <md-grid-list cols={{dimensionSelected.cols}} gutterSize="2px">
+        <md-grid-tile [dragula]="dimensionSelected.name"  [style.background]="'lightblue'">
+        </md-grid-tile>
+        <md-grid-tile *ngFor="let state of dimensionSelected.states" [dragula]="dimensionSelected.name"  [dragulaModel]='dimensionSelected.states'
+            [style.background]="'lightblue'">
+            <md-grid-tile-header>{{state.name}}</md-grid-tile-header>
+            <md-grid-tile-footer>{{state.number}}</md-grid-tile-footer>
+        </md-grid-tile>
+    </md-grid-list>
+</div>

@@ -10,6 +10,8 @@ import { MdCheckbox } from '@angular2-material/checkbox';
 import {MdIcon, MdIconRegistry} from '@angular2-material/icon';
 import { MD_LIST_DIRECTIVES } from '@angular2-material/list';
 import {MD_PROGRESS_BAR_DIRECTIVES} from '@angular2-material/progress-bar';
+import {MD_MENU_DIRECTIVES} from '@angular2-material/menu';
+
 /* Directives and services */
 import template from './proyect.component.html';
 
@@ -23,7 +25,7 @@ import { DragulaService, Dragula } from 'ng2-dragula/ng2-dragula';
 @Component({
     selector: 'proyect',
     template,
-    directives: [Dragula, ProyectFormComponent,ProyectDetailComponent,MD_PROGRESS_BAR_DIRECTIVES, MD_CARD_DIRECTIVES, MD_INPUT_DIRECTIVES, MdIcon, MD_LIST_DIRECTIVES, MD_GRID_LIST_DIRECTIVES, ROUTER_DIRECTIVES, MdCheckbox],
+    directives: [Dragula, ProyectFormComponent,ProyectDetailComponent,MD_PROGRESS_BAR_DIRECTIVES,MD_MENU_DIRECTIVES, MD_CARD_DIRECTIVES, MD_INPUT_DIRECTIVES, MdIcon, MD_LIST_DIRECTIVES, MD_GRID_LIST_DIRECTIVES, ROUTER_DIRECTIVES, MdCheckbox],
     providers: [HTTP_PROVIDERS, MdIconRegistry, DragulaService],
 })
 
