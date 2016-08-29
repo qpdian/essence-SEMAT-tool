@@ -1,8 +1,8 @@
 import { Alphas } from '../../../both/collections/alphas.collection';
 import { Alpha} from '../../../both/interfaces/alpha.interface';
-
+import {Prueba} from './test';
 export function loadAlphas() {
-
+       console.log(new Prueba().test());
     if (Alphas.find().count() === 0) {
         const alphas: Alpha[] = [
             {
