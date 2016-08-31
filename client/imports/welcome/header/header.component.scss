@@ -8,7 +8,7 @@
     text-align: center;
     width: 100%;
     background-color: #fafafa;
-    line-height: 100px;
+    line-height: 50px;
     font-size: 15px;
     z-index: 1000;
 }
@@ -16,8 +16,9 @@
     z-index: 88888;
 }
 .inner {
-    max-width: 1024px;
-    margin: 0 auto;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 0px;
 }
 a {
     text-decoration: none;

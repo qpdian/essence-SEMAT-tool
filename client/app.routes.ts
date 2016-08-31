@@ -3,6 +3,7 @@ import { Meteor } from 'meteor/meteor';
 
 import { AppRoutes } from './imports/app/app.routes';
 import { WelcomeRoutes } from    './imports/welcome/welcome.routes';
+import { LoginComponent } from './imports/auth/login.component';
 
 const routes: RouterConfig = [
     //{ path: '', component: HeaderComponent },
@@ -11,6 +12,7 @@ const routes: RouterConfig = [
    // { path: 'essboard', component: AppMainComponent},
    ...WelcomeRoutes,
    ...AppRoutes,
+    { path: 'login', component: LoginComponent },
 ];
 
 export const APP_ROUTER_PROVIDERS = [

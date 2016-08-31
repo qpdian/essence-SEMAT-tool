@@ -2,57 +2,70 @@ import { Alphas } from '../../../both/collections/alphas.collection';
 import { Alpha} from '../../../both/interfaces/alpha.interface';
 import {Prueba} from './test';
 export function loadAlphas() {
-       console.log(new Prueba().test());
-    if (Alphas.find().count() === 0) {
+
+    let element = {
+        code: '1',
+        icon :'folder',
+        name: 'Alphas',
+        description : 'Un abstracto capade rendimiento'
+    };
+        if (Alphas.find().count() === 0) {
         const alphas: Alpha[] = [
             {
                 name: 'Oportunidad',
                 area: {
                     name: 'Customer',
-                    type:'customer'
-                },    
+                    view: 'customer',
+                },
+                elementKernel:'1',
             },
             {
                 name: 'Interesado',
                 area: {
                     name: 'Customer',
-                    type:'customer'
+                    view:'customer'
                 },
+                 elementKernel:'1',
             },
             {
                 name: 'Requerimientos',
                 area: {
                     name: 'Solucion',
-                    type:'solution'
+                    view:'solution'
                 },
+                 elementKernel:'1',
             },
             {
                 name: 'Sistema de Software',
                 area: {
                     name: 'Solucion',
-                    type:'solution'
+                    view:'solution'
                 },
+                 elementKernel:'1',
             },
             {
                 name: 'Trabajo',
                 area: {
                     name: 'Esfuerzo',
-                    type:'endeavor'
+                    view:'endeavor'
                 },
+                 elementKernel:'1',
             },
             {
                 name: 'Forma de trabajo',
                 area: {
                     name: 'Esfuerzo',
-                    type:'endeavor'
+                    view:'endeavor'
                 },
+                 elementKernel:'1',
             },
             {
                 name: 'Equipo',
                 area: {
                     name: 'Esfuerzo',
-                    type:'endeavor'
+                    view:'endeavor'
                 },
+                 elementKernel:'1',
             },
 
         ];
